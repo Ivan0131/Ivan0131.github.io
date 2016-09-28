@@ -4,22 +4,42 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Ivan&#39;s Blog</title>
+    <title>人工神经网络可视化--2016年可视化会议 | Ivan&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Ivan">
     
 
     
-    <meta name="description" content="学习总结 思考感悟 知识管理">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ivan's Blog">
-<meta property="og:url" content="http://yanyuyu.info/index.html">
+    <meta name="description" content="人工神经网络可视化–2016年可视化会议过去几年，深度神经网络在机器学习方面取得了巨大的成功，在某些任务上甚至超过了人类。然而，神经网络是一个black boxes。与传统机器学习方法相比，它不需要人为地去选择特征。如何理解大规模的神经网络却是件困难的事：神经网络通过训练学到了什么特征。 针对这一问题，大量的科研人员进行了大量的研究及实践。在神经网络以及机器学习领域的会议上，已经出现很多关于人工神">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人工神经网络可视化--2016年可视化会议">
+<meta property="og:url" content="http://yanyuyu.info/2016/09/22/vis-2016-netural-network/index.html">
 <meta property="og:site_name" content="Ivan's Blog">
-<meta property="og:description" content="学习总结 思考感悟 知识管理">
+<meta property="og:description" content="人工神经网络可视化–2016年可视化会议过去几年，深度神经网络在机器学习方面取得了巨大的成功，在某些任务上甚至超过了人类。然而，神经网络是一个black boxes。与传统机器学习方法相比，它不需要人为地去选择特征。如何理解大规模的神经网络却是件困难的事：神经网络通过训练学到了什么特征。 针对这一问题，大量的科研人员进行了大量的研究及实践。在神经网络以及机器学习领域的会议上，已经出现很多关于人工神">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/mnist_projection.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/mnist_activation_projection.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/svhn_before_training_projection.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/svhn_after_training_projection.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/mnist_inter_layer_evolution.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/mnist_inter_epoch_evolution.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/mnist_activation_neuron_projection.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/svhn_neuron_map.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/svhn_activation_projection.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/alexnet1.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/alexnet2.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/y_system_overview.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/activations_151_1.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/activations_151_2.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/activation_max.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/activation_max_unit.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/cnnvis_system.png">
+<meta property="og:image" content="http://yanyuyu.info/img/vis-2016-netural-network/cnnvis_pipeline.png">
+<meta property="og:updated_time" content="2016-09-28T13:35:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ivan's Blog">
-<meta name="twitter:description" content="学习总结 思考感悟 知识管理">
+<meta name="twitter:title" content="人工神经网络可视化--2016年可视化会议">
+<meta name="twitter:description" content="人工神经网络可视化–2016年可视化会议过去几年，深度神经网络在机器学习方面取得了巨大的成功，在某些任务上甚至超过了人类。然而，神经网络是一个black boxes。与传统机器学习方法相比，它不需要人为地去选择特征。如何理解大规模的神经网络却是件困难的事：神经网络通过训练学到了什么特征。 针对这一问题，大量的科研人员进行了大量的研究及实践。在神经网络以及机器学习领域的会议上，已经出现很多关于人工神">
+<meta name="twitter:image" content="http://yanyuyu.info/img/vis-2016-netural-network/mnist_projection.png">
 
     
     <link rel="alternative" href="/atom.xml" title="Ivan&#39;s Blog" type="application/atom+xml">
@@ -73,12 +93,10 @@
 </div>
     </header>
     <div id="container">
-      <div id="main">
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
   <h1 itemprop="name">
     
       <a href="/2016/09/22/vis-2016-netural-network/" title="人工神经网络可视化--2016年可视化会议" itemprop="url">人工神经网络可视化--2016年可视化会议</a>
@@ -92,9 +110,16 @@
     
   </p>
 </header>
-    <div class="article-content">
-        
-        <h1 id="人工神经网络可视化–2016年可视化会议"><a href="#人工神经网络可视化–2016年可视化会议" class="headerlink" title="人工神经网络可视化–2016年可视化会议"></a>人工神经网络可视化–2016年可视化会议</h1><p>过去几年，深度神经网络在机器学习方面取得了巨大的成功，在某些任务上甚至超过了人类。然而，神经网络是一个black boxes。与传统机器学习方法相比，它不需要人为地去选择特征。如何理解大规模的神经网络却是件困难的事：神经网络通过训练学到了什么特征。 针对这一问题，大量的科研人员进行了大量的研究及实践。在神经网络以及机器学习领域的会议上，已经出现很多关于人工神经网络的文章，包括最近比较流行的卷积神经网络（Convolutional neural networks， CNN）和循环神经网络（Recurrent neural networks, RNN）。今年在Vis的录用文章中出现了两篇关于神经网络可视化的文章。这说明可视化领域的人也开始关注神经网络，并想通过可视化方法帮助人们去理解神经网络，打开神经网络这个黑盒子。</p>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#人工神经网络可视化–2016年可视化会议"><span class="toc-number">1.</span> <span class="toc-text">人工神经网络可视化–2016年可视化会议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualizing-the-Hidden-Activity-of-Artificial-Neural-Networks"><span class="toc-number">1.1.</span> <span class="toc-text">Visualizing the Hidden Activity of Artificial Neural Networks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结论"><span class="toc-number">1.2.</span> <span class="toc-text">结论</span></a></li></ol></li></ol>
+		
+		</div>
+		
+		<h1 id="人工神经网络可视化–2016年可视化会议"><a href="#人工神经网络可视化–2016年可视化会议" class="headerlink" title="人工神经网络可视化–2016年可视化会议"></a>人工神经网络可视化–2016年可视化会议</h1><p>过去几年，深度神经网络在机器学习方面取得了巨大的成功，在某些任务上甚至超过了人类。然而，神经网络是一个black boxes。与传统机器学习方法相比，它不需要人为地去选择特征。如何理解大规模的神经网络却是件困难的事：神经网络通过训练学到了什么特征。 针对这一问题，大量的科研人员进行了大量的研究及实践。在神经网络以及机器学习领域的会议上，已经出现很多关于人工神经网络的文章，包括最近比较流行的卷积神经网络（Convolutional neural networks， CNN）和循环神经网络（Recurrent neural networks, RNN）。今年在Vis的录用文章中出现了两篇关于神经网络可视化的文章。这说明可视化领域的人也开始关注神经网络，并想通过可视化方法帮助人们去理解神经网络，打开神经网络这个黑盒子。</p>
 <!--在Vis上出现的最早的神经网络的文章应该是Kwan-Liu Ma老师2005的Opening the Black Box — Data Driven Visualization of Neural Networks（就目前我调研就相关论文来看，可能有错误）。文中使用的是最简单的三层B神P经网络，使用数据驱动的方式，使用节点连接图展示可视化神经网络。但是当网络变得复杂时，这种可视化形式会造成可视化混乱。用户无法通过如此复杂的节点连接图去理解神经网络。 随着神经网络越来越复杂，单层神经元及网络层次也越来越多，这使得神经网络的可视化变得越来越困难。今年的两个文章主要是针对卷积神经网络在图像数据集上的可视化。下面主要介绍这两篇文章。-->
 <h2 id="Visualizing-the-Hidden-Activity-of-Artificial-Neural-Networks"><a href="#Visualizing-the-Hidden-Activity-of-Artificial-Neural-Networks" class="headerlink" title="Visualizing the Hidden Activity of Artificial Neural Networks"></a>Visualizing the Hidden Activity of Artificial Neural Networks</h2><p>这篇论文主要使用降维的方法可视化神经网络学到的数据表示和神经元间的关系。文章主要使用Multilayer perceptrons和Convolutional neural networks这两个神经网络作为例子，使用的数据包括MNIST dataset，SVHN dataset和CIFAR-10 dataset。</p>
 <center><br><img src="img/vis-2016-netural-network/mnist_projection.png" alt="图1 Projection of observations, MNIST test subset(NH: 89.12%)." title="Projection of observations, MNIST test subset."><br></center><br><center><br><img src="img/vis-2016-netural-network/mnist_activation_projection.png" alt="图2 Projection of the last MLP hidden layer activations, MNIST test subset. a) Before training (NH: 83.78%). b) After training (NH: 98.36%, AC: 99.15%). Inset shows classification of visual outliers." title="Projection of the last MLP hidden layer activations, MNIST test subset."><br></center><br>图1展示了MNIST数据集中10个数字类别直接使用t-SNE降维后的结果。从图中可以看出，对于MNIST数据集，直接降维已经可以较好得把类别区分开了。所以在原来的数据表示上直接使用分类器可以得到较好的结果。在这里，作者使用neighborhood hit (NH)来度量降维后各个类别的区分程度。给定一个k的值，NH表示在相邻k个点中属于同一类的点所占的比例。这里直接降维后NH值为89.12%。<br>图2是为了说明神经网络对于特征的提取作用。MLP最后一层输出层相当于一个multinomial logistic regression。所以神经网络相对于multinomial logistic regression，区别在于之前的隐藏层对于特征的提取。所以图2展示了训练先后神经网络提取得到的特征。图2(b)与图2(a)相比，我们发现训练后的神经网络提取得到的特征可以更好的将各个类别分离。<br><br><center><br><img src="img/vis-2016-netural-network/svhn_before_training_projection.png" alt="图3 Projection of the last MLP hidden layer activations before training, SVHN test subset (NH: 20.94%). Poor class separation is visible." title="Projection of the last MLP hidden layer activations before training, SVHN test subset"><br></center><br><center><br><img src="img/vis-2016-netural-network/svhn_after_training_projection.png" alt="图4 Projection of the MLP hidden layer activations after training, SVHN test subset. a) First hidden layer (NH: 52.78%). b) Last hidden layer (NH: 67%)." title="Projection of the MLP hidden layer activations after training, SVHN test subset"><br></center><br>相比于MNIST这个数据集，SVHN直接降维后类别的区分度要差很多。如图3所示，NH值仅20.94%。图4展示的MLP第一层数据表示和最后一层数据表示之间的区别。主要为了说明神经网络随着层数的加深，是否可以学到更高的特征表示。从图4中我们可以看出，最后一层确实学到了更好的有利于分类的特征。作者还发现最后一层的降维结果中，每个类别被分成了两个cluster。通过分析发现，一个是相同数字包含亮背景一个是暗背景。然后作者通过高斯模糊对输入图像进行处理，提高了分类的准确率。同时，作者用相同的方式分析了CNN的结果。<br><br>对于如何展示特征表示的演化，作者采用2D的轨迹来表示序列，相比于动画而言更容易捕捉变化。并采用trail bundling避免拥堵混乱。如图5所示，展示了神经网络不同层之间特征表示的演变。图6表示迭代过程中，最后一层隐藏层的演变。<br><center><br><img src="img/vis-2016-netural-network/mnist_inter_layer_evolution.png" alt="图5 Inter-layer evolution, four MLP hidden layers after training, MNIST test subset. Brighter trail parts show later layers." title="Inter-layer evolution, four MLP hidden layers after training, MNIST test subset."><br></center><br><center><br><img src="img/vis-2016-netural-network/mnist_inter_epoch_evolution.png" alt="图6 Inter-epoch evolution, last CNN hidden layer, epochs 0-100, in steps of 20, MNIST test subset. Brighter trail parts show later epochs." title="Inter-epoch evolution, last CNN hidden layer, epochs 0-100, in steps of 20, MNIST test subset. ">&lt;<br></center>
@@ -112,14 +137,9 @@
 <p><center><img src="img/vis-2016-netural-network/cnnvis_pipeline.png" alt="图15 CNNVis系统流程" title="CNNVis pipeline"></center><br>对于rectangle packing算法布局，biclustering-based边绑定算法， activation matrix reordering算法，以及neurons聚类算法的具体内容请参考论文。这里不同详细描述。对于论文的有效性，作者通过2个case study加以证明。一个是对不同深度，宽度的CNN的可视化探索比较，用来说明CNNVis对于帮助机器学习专家对CNN结构的改进的帮助性，另一个是训练诊断，对于改进后的CNN网络无法达到预期结果时，如何通过CNNVis进行诊断发现问题所在，并对模型进行改进（具体内容详见论文）。</p>
 <h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>以上是今年的两篇关于神经网络的可视化论文。神经网络现在在图像领域已经火的不行，现在的视觉论文基本都是神经网络为主。最近几年开始想NLP领域发展。对于可视化这块，感觉无论是科学计算可视化还是信息可视化，在神经网络这块，都有很多工作可以做。明天的VIS应该会出现更多这方面的论文。</p>
 <p>[1] Liu, M., Shi, J., Li, Z., Li, C., Zhu, J., &amp; Liu, S. (2016). Towards Better Analysis of Deep Convolutional Neural Networks, 2626(c). <a href="http://doi.org/10.1109/TVCG.2016.2598831" target="_blank" rel="external">http://doi.org/10.1109/TVCG.2016.2598831</a><br>[2] Yosinski, J., Clune, J., &amp; Fuchs, T. (2015). Understanding Neural Networks Through Deep Visualization.<br>[3] Telea, A. C., Rauber, P. E., Fadel, S. G., &amp; Falc, A. X. (2016). Visualizing the Hidden Activity of Artificial Neural Networks, 1(c). <a href="http://doi.org/10.1109/TVCG.2016.2598838" target="_blank" rel="external">http://doi.org/10.1109/TVCG.2016.2598838</a>  </p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
+  
+	</div>
+		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
 <div class="article-categories">
@@ -137,82 +157,43 @@
 
 
 
-
-<div class="comments-count">
+	<div class="article-share" id="share">
 	
-</div>
+	  <div data-url="http://yanyuyu.info/2016/09/22/vis-2016-netural-network/" data-title="人工神经网络可视化--2016年可视化会议 | Ivan&#39;s Blog" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
 
 </footer>
 
-
-    </article>
-
-
-
-
-
-
-   
-    
-    <article class="post-expand post" itemprop="articleBody"> 
-        <header class="article-info clearfix">
-  <h1 itemprop="name">
-    
-      <a href="/2016/09/18/hello-world/" title="Hello World" itemprop="url">Hello World</a>
-  </h1>
-  <p class="article-author">By
-       
-		<a href="/about" title="Ivan" target="_blank" itemprop="author">Ivan</a>
-		
-  <p class="article-time">
-    <time datetime="2016-09-18T06:03:03.000Z" itemprop="datePublished"> 发表于 2016-09-18</time>
-    
-  </p>
-</header>
-    <div class="article-content">
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-        
-        
-        <p class="article-more-link">
-          
-       </p>
-    </div>
-    <footer class="article-footer clearfix">
-<div class="article-catetags">
-
-
-</div>
-
-
-
-
-<div class="comments-count">
+   	       
+	</article>
 	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2016/09/18/hello-world/"  title="Hello World">
+ <strong>下一篇：</strong><br/> 
+ <span>Hello World
+</span>
+</a>
 </div>
 
-</footer>
+</nav>
 
+	
 
-    </article>
-
-
-
-
-
-
-
-</div>
+</div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#人工神经网络可视化–2016年可视化会议"><span class="toc-number">1.</span> <span class="toc-text">人工神经网络可视化–2016年可视化会议</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Visualizing-the-Hidden-Activity-of-Artificial-Neural-Networks"><span class="toc-number">1.1.</span> <span class="toc-text">Visualizing the Hidden Activity of Artificial Neural Networks</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结论"><span class="toc-number">1.2.</span> <span class="toc-text">结论</span></a></li></ol></li></ol>
+ 
+  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -369,12 +350,89 @@ $(document).ready(function(){
       m.removeClass('moveMain');
       a.css('display', 'block').removeClass('fadeOut');
       o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
         
     }
   });
 });
 </script>
 
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
 
 
 
@@ -445,4 +503,4 @@ var _hmt = _hmt || [];
 <!-- Tiny_search End -->
 
   </body>
- </html>
+</html>
